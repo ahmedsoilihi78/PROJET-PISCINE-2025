@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un coach</title>
+</head>
+<body>
+<h2>Ajouter un nouveau coach</h2>
+
+<form action="../../php/coach/ajouterCoach.php" method="POST" enctype="multipart/form-data">
+    <!-- Compte utilisateur -->
+    <fieldset>
+        <legend>Informations personnelles</legend>
+
+        <label>Nom :</label><br>
+        <input type="text" name="nom" required><br><br>
+
+        <label>Prénom :</label><br>
+        <input type="text" name="prenom" required><br><br>
+
+        <label>Email :</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Mot de passe :</label><br>
+        <input type="password" name="mot_de_passe" required><br><br>
+
+        <label>Confirmation du mot de passe :</label><br>
+        <input type="password" name="confirm_password" required><br><br>
+
+        <label>Adresse :</label><br>
+        <input type="text" name="adresse"><br><br>
+
+        <label>Téléphone :</label><br>
+        <input type="text" name="telephone"><br><br>
+
+        <label>Carte Étudiant :</label><br>
+        <input type="text" name="carte_etudiant"><br><br>
+    </fieldset>
+
+    <br>
+
+    <!-- Informations spécifiques au coach -->
+    <fieldset>
+        <legend>Spécialisation et documents</legend>
+
+        <label>Spécialité :</label><br>
+        <input type="text" name="specialite" required><br><br>
+
+        <label>Bureau :</label><br>
+        <input type="text" name="bureau"><br><br>
+
+        <label>URL Vidéo (YouTube, Vimeo, etc.) :</label><br>
+        <input type="url" name="video_url"><br><br>
+
+        <label>Photo :</label><br>
+        <input type="file" name="photo" accept="image/*" required><br><br>
+
+        <label>CV (PDF) :</label><br>
+        <input type="file" name="cv_pdf" accept=".pdf" required><br><br>
+    </fieldset>
+
+    <br>
+
+    <!-- Formations -->
+    <fieldset>
+        <legend>Formations (2)</legend>
+
+        <label>Formation 1 :</label><br>
+        Titre : <input type="text" name="formation_titre_1"><br>
+        École : <input type="text" name="formation_ecole_1"><br>
+        Année : <input type="text" name="formation_annee_1"><br><br>
+
+        <label>Formation 2 :</label><br>
+        Titre : <input type="text" name="formation_titre_2"><br>
+        École : <input type="text" name="formation_ecole_2"><br>
+        Année : <input type="text" name="formation_annee_2"><br><br>
+    </fieldset>
+
+    <br>
+
+    <!-- Expériences -->
+    <fieldset>
+        <legend>Expériences (2)</legend>
+
+        <label>Expérience 1 :</label><br>
+        Poste : <input type="text" name="experience_poste_1"><br>
+        Lieu : <input type="text" name="experience_lieu_1"><br>
+        Durée : <input type="text" name="experience_duree_1"><br><br>
+
+        <label>Expérience 2 :</label><br>
+        Poste : <input type="text" name="experience_poste_2"><br>
+        Lieu : <input type="text" name="experience_lieu_2"><br>
+        Durée : <input type="text" name="experience_duree_2"><br><br>
+    </fieldset>
+
+    <br>
+
+    <!-- Certifications -->
+    <fieldset>
+        <legend>Certifications (2)</legend>
+
+        <label>Certification 1 :</label><br>
+        <input type="text" name="certification_1"><br><br>
+
+        <label>Certification 2 :</label><br>
+        <input type="text" name="certification_2"><br><br>
+    </fieldset>
+
+    <br>
+
+    <!-- Disponibilités -->
+    <fieldset>
+        <legend>Disponibilités hebdomadaires</legend>
+        <p>Cochez les créneaux où le coach est disponible :</p>
+
+        <!-- Boucle sur les jours -->
+        <div><label>Lundi :</label><br>
+            <input type="checkbox" name="dispo[Lundi][matin]" value="true"> Matin
+            <input type="checkbox" name="dispo[Lundi][apresmidi]" value="true"> Après-midi
+        </div>
+        <div><label>Mardi :</label><br>
+            <input type="checkbox" name="dispo[Mardi][matin]" value="true"> Matin
+            <input type="checkbox" name="dispo[Mardi][apresmidi]" value="true"> Après-midi
+        </div>
+        <div><label>Mercredi :</label><br>
+            <input type="checkbox" name="dispo[Mercredi][matin]" value="true"> Matin
+            <input type="checkbox" name="dispo[Mercredi][apresmidi]" value="true"> Après-midi
+        </div>
+        <div><label>Jeudi :</label><br>
+            <input type="checkbox" name="dispo[Jeudi][matin]" value="true"> Matin
+            <input type="checkbox" name="dispo[Jeudi][apresmidi]" value="true"> Après-midi
+        </div>
+        <div><label>Vendredi :</label><br>
+            <input type="checkbox" name="dispo[Vendredi][matin]" value="true"> Matin
+            <input type="checkbox" name="dispo[Vendredi][apresmidi]" value="true"> Après-midi
+        </div>
+        <div><label>Samedi :</label><br>
+            <input type="checkbox" name="dispo[Samedi][matin]" value="true"> Matin
+            <input type="checkbox" name="dispo[Samedi][apresmidi]" value="true"> Après-midi
+        </div>
+        <div><label>Dimanche :</label><br>
+            <input type="checkbox" name="dispo[Dimanche][matin]" value="true"> Matin
+            <input type="checkbox" name="dispo[Dimanche][apresmidi]" value="true"> Après-midi
+        </div>
+    </fieldset>
+
+    <br>
+    <input type="submit" value="Ajouter le coach">
+</form>
+</body>
+</html>

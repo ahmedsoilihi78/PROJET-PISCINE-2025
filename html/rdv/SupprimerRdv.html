@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des RDV</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #userInfo { font-weight: bold; margin-bottom: 1em; }
+    .msg { margin-bottom: 1em; padding: 10px; border-radius: 4px; }
+    .msg.success { background: #dfd; color: #060; }
+    .msg.error   { background: #fdd; color: #900; }
+    table { border-collapse: collapse; width:100%; margin-top:20px; }
+    th, td { border:1px solid #ccc; padding:8px; text-align:left; }
+    th { background:#f4f4f4; }
+    tr:nth-child(even){ background:#fafafa; }
+    .delete { color:#c00; cursor:pointer; }
+  </style>
+</head>
+<body>
+
+<h1>Gestion des rendez-vous</h1>
+<div id="userInfo">Chargement des infos utilisateur…</div>
+<div id="message"></div>
+<table id="rdvTable">
+  <thead>
+  <tr>
+    <th>Date</th>
+    <th>Heure</th>
+    <th>Coach</th>
+    <th>Client</th>
+    <th>Statut</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script src="../../js/rdv/SupprimerRdv.js"></script>
+
+</body>
+</html>

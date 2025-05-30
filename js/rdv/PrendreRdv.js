@@ -1,0 +1,85 @@
+const backend = '../../php/rdv/PrendreRdv.php';
+
+// 1) charger la liste des coachs
+fetch(`${backend}?action=getCoaches`)
+    .then(r => r.json())
+    .then(list => {
+        const sel = document.getElementById('coachSelect');
+        list.forEach(c => {
+            const opt = document.createElement('option');
+            opt.value = c.id;
+            opt.textContent = `${c.nom} ${c.prenom}`;
+            sel.appendChild(opt);
+        });
+    });
+
+// 2) quand on change de coach, on affiche le planning
+document.getElementById('coachSelect').addEventListener('change', loadCalendar);
+
+function loadCalendar() {
+    const coach_id = this.value;
+    const infoDiv   = document.getElementById('coachInfo');
+    const container = document.getElementById('calendarContainer');
+
+    if (!coach_id) {
+        infoDiv.textContent = '';
+        container.innerHTML = '';
+        return;
+    }
+
+    // infos coach
+    fetch(`${backend}?action=getCoachInfo&coach_id=${coach_id}`)
+        .then(r => r.json())
+        .then(c => {
+            infoDiv.textContent = `${c.nom} ${c.prenom} – ${c.specialite}`;
+        });
+
+    // planning
+    fetch(`${backend}?action=getCalendar&coach_id=${coach_id}`)
+        .then(r => r.json())
+        .then(data => renderCalendar(data, coach_id));
+}
+
+function renderCalendar(data, coach_id) {
+    const container = document.getElementById('calendarContainer');
+    container.innerHTML = '';
+    const table = document.createElement('table');
+
+    // en-tête
+    const thead = document.createElement('thead');
+    const trh = document.createElement('tr');
+    trh.innerHTML = data.weekDates
+        .map(w => `<th>${w.label}<br>${w.date}</th>`)
+        .join('');
+    thead.appendChild(trh);
+    table.appendChild(thead);
+
+    // corps
+    const tbody = document.createElement('tbody');
+    data.slots.forEach(slot => {
+        const tr = document.createElement('tr');
+        data.weekDates.forEach(w => {
+            const status = data.matrix[w.date][slot];
+            const td = document.createElement('td');
+            td.className = status;
+            td.textContent = slot;
+
+            if (status === 'free') {
+                // redirection immédiate vers le paiement
+                td.addEventListener('click', () => {
+                    const params = new URLSearchParams({
+                        coach_id: coach_id,
+                        date:      w.date,
+                        heure:     slot
+                    });
+                    window.location.href = `../../php/paiement/paiement.php?${params.toString()}`;
+                });
+            }
+
+            tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    container.appendChild(table);
+}
