@@ -8,14 +8,13 @@ if (!isset($_SESSION['user_id'])) {
 }
 $current_user_id = $_SESSION['user_id'];
 
-// Vérifie que l'id du destinataire est passé dans l'URL
+
 if (!isset($_GET['user'])) {
     header("Location: chat_select.php");
     exit();
 }
 $other_user_id = intval($_GET['user']);
 
-// Sécurité : vérifier que ce user existe (et pas soi-même)
 $stmt = $pdo->prepare("SELECT nom, prenom FROM users WHERE id = ? AND id != ?");
 $stmt->execute([$other_user_id, $current_user_id]);
 $dest = $stmt->fetch();
@@ -23,7 +22,7 @@ if (!$dest) {
     die("Destinataire introuvable ou non autorisé.");
 }
 
-// Envoi d’un nouveau message
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['contenu'])) {
     $contenu = htmlspecialchars($_POST['contenu']);
     $date_envoi = date('Y-m-d H:i:s');
@@ -35,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['contenu'])) {
     exit();
 }
 
-// Récupérer l'historique des messages
+
 $sql = "SELECT m.*, u.nom, u.prenom 
         FROM messages m
         JOIN users u ON m.sender_id = u.id
@@ -46,6 +45,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute([$current_user_id, $other_user_id, $other_user_id, $current_user_id]);
 $messages = $stmt->fetchAll();
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
