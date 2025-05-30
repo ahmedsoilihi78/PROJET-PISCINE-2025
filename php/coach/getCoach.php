@@ -1,5 +1,4 @@
 <?php
-session_start();
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -52,24 +51,24 @@ $dispos = $xml->disponibilite->jour ?? [];
         <h1><span class="red">Sportify:</span> <span class="blue">Consultation Sportive</span></h1>
       </div>
       <div class="logo">
-        <a href="../../accueil.html">
+        <a href="../../html/accueil.html">
           <img src="../../images_accueil/Logo_sportify.png" alt="Logo Sportify" />
         </a>
       </div>
     </header>
 
     <nav class="navigation">
-      <button onclick="window.location.href='../../accueil.html'">Accueil</button>
+      <button onclick="window.location.href='../../html/accueil.html'">Accueil</button>
       <button onclick="toggleParcourir()" aria-expanded="false" aria-controls="parcourirLinks">Tout Parcourir</button>
       <button onclick="toggleRecherche()">Recherche</button>
-      <button onclick="window.location.href='../../rendez_vous.html'">Rendez-vous</button>
-      <button onclick="window.location.href='../../votre_compte.html'">Votre Compte</button>
+      <button onclick="window.location.href='../rdv/ConsulterRdv.php'">Rendez-vous</button>
+      <button onclick="window.location.href='../authentification/votre_compte.php'">Votre Compte</button>
     </nav>
 
     <div class="parcourir-dropdown" id="parcourirLinks" style="display: none;">
-      <a href="../../activites_sportives.html">Activités sportives</a>
-      <a href="../../sports_competition.html">Les Sports de compétition</a>
-      <a href="../../salle_de_sport.html">Salle de sport Omnes</a>
+      <a href="../../html/activites_sportives.html">Activités sportives</a>
+      <a href="../../html/sports_competition.html">Les Sports de compétition</a>
+      <a href="../../html/salle_de_sport.html">Salle de sport Omnes</a>
     </div>
 
     <div id="rechercheContainer" class="recherche-form">
@@ -122,7 +121,7 @@ $dispos = $xml->disponibilite->jour ?? [];
 
       <div style="text-align: center; margin-top: 30px;">
         <p><a href="../../<?= $cv_pdf ?>" target="_blank">Télécharger le CV (PDF)</a></p>
-        <button class="nav-btn" onclick="location.href='../../sports_competition.html'">← Retour à la liste des coachs</button>
+        <button class="nav-btn" onclick="location.href='../../html/sports_competition.html'">← Retour à la liste des coachs</button>
       </div>
     </section>
 
