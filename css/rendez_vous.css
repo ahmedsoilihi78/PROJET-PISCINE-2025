@@ -1,0 +1,56 @@
+/* Centrage de la section des rendez-vous */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Table bien centrée avec limite de largeur */
+.main-section table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Centrer le paragraphe d’identification */
+.main-section p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Boutons "Ajouter" et "Supprimer" */
+.btn-action {
+  padding: 10px 20px;
+  margin: 10px 10px 0 0;
+  background-color: #004080; /* même bleu que dans PrendreRDV */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+  background-color: #0066cc;
+}
+
+/* Spécifique pour bouton de suppression */
+.btn-action.delete {
+  background-color: #e74c3c;
+}
+
+.btn-action.delete:hover {
+  background-color: #c0392b;
+}
+
+/* Conteneur boutons aligné centre */
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}

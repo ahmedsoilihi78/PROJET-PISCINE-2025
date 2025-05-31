@@ -1,0 +1,114 @@
+/* Conteneur général */
+.coach-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Photo */
+.coach-photo {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  margin: 20px auto;
+}
+
+/* Titres */
+.coach-container h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #2e4c8c;
+  margin-bottom: 10px;
+}
+
+.coach-container h3 {
+  margin-top: 30px;
+  color: #007bff;
+  font-size: 22px;
+}
+
+/* Paragraphes et listes */
+.coach-container p,
+.coach-container li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.coach-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Vidéo */
+.video-wrapper {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 8px;
+}
+
+/* Tableau */
+.coach-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.coach-container th,
+.coach-container td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.coach-container th {
+  background-color: #007bff;
+  color: white;
+}
+
+.coach-container td {
+  background-color: #f9f9f9;
+}
+
+.coach-container tr:nth-child(even) td {
+  background-color: #f1f1f1;
+}
+
+/* Lien CV et retour */
+.coach-container a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.coach-container a:hover {
+  text-decoration: underline;
+}
+
+.nav-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #0097a7;
+}
