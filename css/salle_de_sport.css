@@ -1,0 +1,145 @@
+/* -------- SALLE DE SPORT -------- */
+
+.card {
+  display: flex;
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 20px;
+  flex: 1;
+}
+
+.info h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #2e4c8c;
+}
+
+#servicesBtn {
+  background-color: #f7cb3d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.services-section {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.services-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services-section li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.services-section li:hover {
+  background: #f0f8ff;
+}
+
+#serviceContent {
+  margin-top: 20px;
+}
+
+/* TABLEAU GYM */
+.gym-schedule {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gym-schedule thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.gym-schedule th, .gym-schedule td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.gym-schedule tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* RÈGLES */
+.machine-rules,
+.machine-rules-text {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.machine-rules {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.machine-rules-text ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.machine-rules-text li {
+  padding-bottom: 6px;
+}
+
+/* GALERIE NUTRITION */
+.nutrition-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product {
+  width: 160px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.product img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product p {
+  margin-top: 10px;
+  font-weight: 500;
+}
