@@ -23,5 +23,4 @@ Sportify est une application web permettant :
 
 1. **Cloner ce dépôt :**
    ```sh
-   git clone https://github.com/votre-utilisateur/sportify.git
-
+   git clone https://github.com/ahmedsoilihi78/PROJET-PISCINE-2025.git
