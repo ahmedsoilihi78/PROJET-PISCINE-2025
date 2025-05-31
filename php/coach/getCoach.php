@@ -61,7 +61,7 @@ $dispos = $xml->disponibilite->jour ?? [];
       <button onclick="window.location.href='../../html/accueil.html'">Accueil</button>
       <button onclick="toggleParcourir()" aria-expanded="false" aria-controls="parcourirLinks">Tout Parcourir</button>
       <button onclick="toggleRecherche()">Recherche</button>
-      <button onclick="window.location.href='../rdv/ConsulterRdv.php'">Rendez-vous</button>
+      <button onclick="window.location.href='../../html/rendez_vous.html'">Rendez-vous</button>
       <button onclick="window.location.href='../authentification/votre_compte.php'">Votre Compte</button>
     </nav>
 
