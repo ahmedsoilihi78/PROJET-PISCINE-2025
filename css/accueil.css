@@ -1,0 +1,140 @@
+/* -------- ACCUEIL -------- */
+
+/* CARROUSEL */
+.carousel {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.carousel h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #2e4c8c;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.carousel-slide img {
+  width: 300px;          /* ✅ carré, pas trop grand */
+  height: 300px;         /* ✅ carré */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;        /* ✅ centré */
+  border-radius: 12px;   /* un petit arrondi sympa */
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.carousel-caption h4 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #fdd835;
+}
+
+.carousel-caption p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.carousel-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dots .dot.active {
+  background-color: #007bff;
+}
+
+/* ÉVÉNEMENT */
+.event-or-bulletin {
+  background-color: #f0f8ff;
+  border: 2px dashed #007bff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.event-or-bulletin h3 {
+  margin-bottom: 15px;
+  color: #007bff;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.event-or-bulletin p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.event-image {
+  margin-top: 15px;
+  max-width: 30%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
