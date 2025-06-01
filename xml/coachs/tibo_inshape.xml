@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coach>
+    <id>36</id>
+    <nom>Inshape</nom>
+    <prenom>Tibo</prenom>
+    <email>tibz.inshape@sportify.omnes</email>
+    <specialites>
+        <specialite>Musculation</specialite>
+        <specialite>Fitness</specialite>
+    </specialites>
+    <video>https://www.youtube.com/embed/h4eYpDz0yP8</video>
+    <photo>../../uploads/photos/tibo_inshape.png</photo>
+    <cv_pdf>../../uploads/cvs/tibo_inshape.pdf</cv_pdf>
+
+    <formations>
+        <formation>
+            <titre>Licence STAPS</titre>
+            <ecole>Université de Grenoble</ecole>
+            <annee>2015</annee>
+        </formation>
+        <formation>
+            <titre>Master en Préparation Physique</titre>
+            <ecole>INSEP</ecole>
+            <annee>2017</annee>
+        </formation>
+    </formations>
+    <experiences>
+        <experience>
+            <poste>Coach personnel</poste>
+            <lieu>Basic-Fit, Paris</lieu>
+            <duree>2017-2020</duree>
+        </experience>
+        <experience>
+            <poste>Responsable musculation</poste>
+            <lieu>Omnes Gym</lieu>
+            <duree>2021-Présent</duree>
+        </experience>
+    </experiences>
+    <certifications>
+        <certification>BPJEPS Activités de la Forme</certification>
+        <certification>Secourisme PSC1</certification>
+    </certifications>
+    <disponibilite>
+        <jour nom="Lundi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mardi">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Mercredi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Jeudi">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Vendredi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Samedi">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Dimanche">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+    </disponibilite>
+</coach>

@@ -1,0 +1,35 @@
+.logout-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 30px 0;
+}
+
+.btn-deconnexion {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-deconnexion:hover {
+  background-color: #e60000;
+}
+
+.main-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-section button:hover {
+  background-color: #0066cc;
+}

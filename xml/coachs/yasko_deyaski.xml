@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coach>
+    <id>40</id>
+    <nom>de Yaski</nom>
+    <prenom>Yasko</prenom>
+    <email>yasko.yaski@sportify.omnes</email>
+    <specialites>
+        <specialite>Tennis</specialite>
+        <specialite>Fitness</specialite>
+    </specialites>
+    <photo>../../uploads/photos/yasko_deyaski.png</photo>
+    <cv_pdf>../../uploads/cvs/yasko_deyaski.pdf</cv_pdf>
+    <formations>
+        <formation>
+            <titre>Licence STAPS</titre>
+            <ecole>Université de Nice</ecole>
+            <annee>2015</annee>
+        </formation>
+        <formation>
+            <titre>Brevet Entraîneur Tennis</titre>
+            <ecole>FFT Paris</ecole>
+            <annee>2018</annee>
+        </formation>
+    </formations>
+    <experiences>
+        <experience>
+            <poste>Coach tennis et fitness</poste>
+            <lieu>Club Monégasque</lieu>
+            <duree>2016-2020</duree>
+        </experience>
+        <experience>
+            <poste>Entraîneur polyvalent</poste>
+            <lieu>Omnes Gym</lieu>
+            <duree>2021-Présent</duree>
+        </experience>
+    </experiences>
+    <certifications>
+        <certification>Diplôme d’État Tennis</certification>
+        <certification>Préparateur Physique Niveau 1</certification>
+    </certifications>
+    <disponibilite>
+        <jour nom="Lundi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mardi">
+            <matin>true</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Mercredi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Jeudi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Vendredi">
+            <matin>true</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Samedi">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Dimanche">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+    </disponibilite>
+</coach>

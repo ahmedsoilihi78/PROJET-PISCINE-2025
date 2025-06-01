@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sportify - Accueil</title>
+  <link rel="stylesheet" href="../css/bases.css" />
+  <link rel="stylesheet" href="../css/accueil.css" />
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="title">
+        <h1><span class="red">Sportify:</span> <span class="blue">Consultation Sportive</span></h1>
+      </div>
+      <div class="logo">
+        <a href="accueil.html">
+          <img src="../images_accueil/Logo_sportify.png" alt="Logo Sportify" />
+        </a>
+      </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="navigation">
+      <button onclick="window.location.href='accueil.html'">Accueil</button>
+      <button onclick="toggleParcourir()">Tout Parcourir</button>
+      <button onclick="window.location.href='recherche/barre_recherche.html'">Recherche</button>
+      <button onclick="window.location.href='../php/rdv/ConsulterRdv.php'">Rendez-Vous</button>
+      <button onclick="window.location.href='../php/authentification/votre_compte.php'">Votre Compte</button>
+    </nav>
+
+    <!-- LIENS DÉROULÉS -->
+    <div class="parcourir-dropdown" id="parcourirLinks">
+      <a href="../php/tout parcourir/activites_sportives.php">Activités sportives</a>
+      <a href="../php/tout parcourir/sports_competition.php">Les Sports de compétition</a>
+      <a href="salle_de_sport.html">Salle de sport Omnes</a>
+    </div>
+
+     <!-- FORMULAIRE DE RECHERCHE -->
+<div id="rechercheContainer" class="recherche-form">
+  <form method="get" action="../php/recherche/barre_recherche.php">
+    <input type="text" name="q" placeholder="Rechercher..." />
+    <button type="submit">Rechercher</button>
+  </form>
+</div>
+
+    <!-- MAIN SECTION -->
+    <section class="main-section">
+      <h2>Bienvenue sur Sportify</h2>
+      <p>
+        Sportify est la plateforme de référence pour tous les membres de la communauté Omnes Education souhaitant
+        accéder facilement à des consultations sportives personnalisées.
+      </p>
+    </section>
+
+    <!-- CARROUSEL -->
+    <div class="carousel">
+      <h3>Événements en vedette</h3>
+      <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="../images_accueil/carrousel1.jpg" alt="Événement 1" />
+            <div class="carousel-caption">
+              <h4>Finale de Champions League</h4>
+              <p>Le PSG affronte l'Inter de Milan pour une première victoire historique...</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="../images_accueil/carrousel2.jpg" alt="Événement 2" />
+            <div class="carousel-caption">
+              <h4>Les GOATs</h4>
+              <p>Hommage à Rafael Nadal lors de Roland Garros, entouré de légendes.</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="../images_accueil/carrousel3.jpg" alt="Événement 3" />
+            <div class="carousel-caption">
+              <h4>Le nouveau visage de la F1</h4>
+              <p>Isack Hadjar débute en F1 avec RedBull, une étoile montante française !</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="../images_accueil/carrousel4.jpeg" alt="Événement 4" />
+            <div class="carousel-caption">
+              <h4>Bordeaux champion d'Europe !</h4>
+              <p>L’UBB triomphe en Coupe d'Europe, une fierté régionale.</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="../images_accueil/carrousel5.jpg" alt="Événement 5" />
+            <div class="carousel-caption">
+              <h4>Pierre Mamade blessé</h4>
+              <p>Le prodige comorien du cyclisme manquera peut-être le Tour de France 2025...</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+
+      <div class="carousel-dots"></div>
+    </div>
+
+    <!-- Événement -->
+    <div class="event-or-bulletin">
+      <h3>Évènement de la semaine</h3>
+      <p>
+        Match de rugby : <strong>ECE Paris vs. Sup de Pub</strong><br/>
+        Date : Jeudi 4 Juin à 15h | Lieu : Stade Omnes
+      </p>
+      <img src="../images_accueil/affiche_rugby.png" alt="Match de Rugby Omnes" class="event-image" />
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <h3>Contactez-nous</h3>
+      <p>Email : <a href="mailto:contact@sportify.fr">contact@sportify.fr</a></p>
+      <p>Téléphone : +33 1 23 45 67 89</p>
+      <p>Adresse : 10 Rue Sextius Michel, 75015 Paris, France</p>
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.3724386130675!2d2.2859626761368914!3d48.851108001219515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b486bb253%3A0x61e9cc6979f93fae!2s10%20Rue%20Sextius%20Michel%2C%2075015%20Paris!5e0!3m2!1sfr!2sfr!4v1748272681968!5m2!1sfr!2sfr" 
+          width="100%" 
+          height="250" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="../js/bases.js"></script>
+  <script src="../js/carrousel.js"></script>
+</body>
+</html>

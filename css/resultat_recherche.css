@@ -1,0 +1,40 @@
+body { font-family: Arial; }
+.result-block {
+    border:1px solid #e2eefd;
+    padding:1em;
+    margin:1em 0;
+    border-radius:10px;
+    background: #fff;
+}
+.result-block.highlight {
+    background: #e6f3ff;
+    border: 1.8px solid #2091fa;
+    box-shadow: 0 4px 24px 0 rgba(32,145,250,0.07);
+}
+.label { font-weight:bold; color:#1678f2; }
+.action-btn { margin: .4em; padding: .4em 1.2em; background: #1678f2; color: #fff; border: none; border-radius: 5px; cursor: pointer;}
+.action-btn:hover { background: #567;}
+.center-message { text-align: center; margin: 35px 0 30px 0; font-size: 1.13em; }
+h1 { margin-top: 30px; margin-bottom: 25px; }
+
+/* Bouton Retour */
+.retour-button {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.retour-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.retour-button button:hover {
+    background-color: #0066cc;
+}

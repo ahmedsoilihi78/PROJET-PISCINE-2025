@@ -1,0 +1,58 @@
+/* admin.css */
+
+.main-section .card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.main-section .card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.main-section .card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.main-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-section button:hover {
+  background-color: #0066cc;
+}
+
+.logout-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 30px 0;
+}
+
+.btn-deconnexion {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-deconnexion:hover {
+  background-color: #e60000;
+}
+

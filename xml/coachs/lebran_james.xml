@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coach>
+    <id>42</id>
+    <nom>James</nom>
+    <prenom>Lebran</prenom>
+    <email>lebran.james@sportify.omnes</email>
+    <specialites>
+        <specialite>Basketball</specialite>
+    </specialites>
+    <video>https://www.youtube.com/embed/E_IC3yECsyI</video>
+    <photo>../../uploads/photos/lebran_james.png</photo>
+    <cv_pdf>../../uploads/cvs/lebran_james.pdf</cv_pdf>
+    <formations>
+        <formation>
+            <titre>Licence en Entraînement Sportif</titre>
+            <ecole>Université de Miami</ecole>
+            <annee>2014</annee>
+        </formation>
+        <formation>
+            <titre>Diplôme FIBA Coach Pro</titre>
+            <ecole>FIBA Europe</ecole>
+            <annee>2017</annee>
+        </formation>
+    </formations>
+    <experiences>
+        <experience>
+            <poste>Coach assistant basketball</poste>
+            <lieu>Los Angeles Gym</lieu>
+            <duree>2015-2019</duree>
+        </experience>
+        <experience>
+            <poste>Entraîneur principal</poste>
+            <lieu>Omnes Gym</lieu>
+            <duree>2020-Présent</duree>
+        </experience>
+    </experiences>
+    <certifications>
+        <certification>FIBA Coaching Level 2</certification>
+        <certification>Secourisme PSC1</certification>
+    </certifications>
+    <disponibilite>
+        <jour nom="Lundi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mardi">
+            <matin>true</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Mercredi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Jeudi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Vendredi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Samedi">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Dimanche">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+    </disponibilite>
+</coach>

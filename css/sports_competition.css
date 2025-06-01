@@ -1,0 +1,38 @@
+/* Style général pour la liste des coachs */
+.main-section ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-section ul li {
+  background-color: #f4f8ff;
+  border: 1px solid #ccd8ef;
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-section ul li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.main-section ul li a {
+  color: #2e4c8c;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+}
+
+.main-section ul li a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}

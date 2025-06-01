@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coach>
+    <id>44</id>
+    <nom>Dupont</nom>
+    <prenom>Antoine</prenom>
+    <email>antoine.dupont@sportify.omnes</email>
+    <specialites>
+        <specialite>Rugby</specialite>
+    </specialites>
+    <photo>../../uploads/photos/antoine_dupont.png</photo>
+    <cv_pdf>../../uploads/cvs/antoine_dupont.pdf</cv_pdf>
+    <formations>
+        <formation>
+            <titre>Licence Entraînement Sportif</titre>
+            <ecole>Université Paul Sabatier</ecole>
+            <annee>2016</annee>
+        </formation>
+        <formation>
+            <titre>Diplôme d’Entraîneur FFR</titre>
+            <ecole>Fédération Française de Rugby</ecole>
+            <annee>2018</annee>
+        </formation>
+    </formations>
+    <experiences>
+        <experience>
+            <poste>Entraîneur U20</poste>
+            <lieu>Stade Toulousain</lieu>
+            <duree>2017-2020</duree>
+        </experience>
+        <experience>
+            <poste>Coach rugby senior</poste>
+            <lieu>Omnes Gym</lieu>
+            <duree>2021-Présent</duree>
+        </experience>
+    </experiences>
+    <certifications>
+        <certification>FFR Entraîneur Niveau 2</certification>
+        <certification>Secourisme PSC1</certification>
+    </certifications>
+    <disponibilite>
+        <jour nom="Lundi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mardi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mercredi">
+            <matin>true</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Jeudi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Vendredi">
+            <matin>true</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Samedi">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Dimanche">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+    </disponibilite>
+</coach>

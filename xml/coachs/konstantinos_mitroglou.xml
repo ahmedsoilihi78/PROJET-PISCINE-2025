@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coach>
+    <id>41</id>
+    <nom>Mitroglou</nom>
+    <prenom>Konstantinos</prenom>
+    <email>konstantinos.mitroglou@sportify.omnes</email>
+    <specialites>
+        <specialite>Cours collectifs</specialite>
+    </specialites>
+    <photo>../../uploads/photos/kostas_mitroglou.png</photo>
+    <cv_pdf>../../uploads/cvs/kostas_mitroglou.pdf</cv_pdf>
+    <formations>
+        <formation>
+            <titre>BPJEPS Activités de la Forme</titre>
+            <ecole>CREPS Montpellier</ecole>
+            <annee>2015</annee>
+        </formation>
+        <formation>
+            <titre>Certificat Zumba Instructor</titre>
+            <ecole>Zumba Fitness International</ecole>
+            <annee>2017</annee>
+        </formation>
+    </formations>
+    <experiences>
+        <experience>
+            <poste>Coach cours collectifs</poste>
+            <lieu>Fitness Park Marseille</lieu>
+            <duree>2016-2020</duree>
+        </experience>
+        <experience>
+            <poste>Animateur cardio et danse</poste>
+            <lieu>Omnes Gym</lieu>
+            <duree>2021-Présent</duree>
+        </experience>
+    </experiences>
+    <certifications>
+        <certification>Les Mills BodyPump Instructor</certification>
+        <certification>Secourisme PSC1</certification>
+    </certifications>
+    <disponibilite>
+        <jour nom="Lundi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mardi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mercredi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Jeudi">
+            <matin>true</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Vendredi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Samedi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Dimanche">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+    </disponibilite>
+</coach>

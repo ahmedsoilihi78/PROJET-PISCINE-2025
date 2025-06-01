@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sportify - Espace Coach</title>
+  <link rel="stylesheet" href="../css/bases.css" />
+  <link rel="stylesheet" href="../css/coach.css" />
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="title">
+        <h1><span class="red">Sportify:</span> <span class="blue">Consultation Sportive</span></h1>
+      </div>
+      <div class="logo">
+        <a href="accueil.html">
+          <img src="../images_accueil/Logo_sportify.png" alt="Logo Sportify" />
+        </a>
+      </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="navigation">
+      <button onclick="window.location.href='accueil.html'">Accueil</button>
+      <button onclick="toggleParcourir()" aria-expanded="false" aria-controls="parcourirLinks">Tout Parcourir</button>
+      <button onclick="window.location.href='recherche/barre_recherche.html'">Recherche</button>
+      <button onclick="window.location.href='../php/rdv/ConsulterRdv.php'">Rendez-Vous</button>
+      <button onclick="window.location.href='../php/authentification/votre_compte.php'">Votre Compte</button>
+    </nav>
+
+    <!-- BOUTON DECONNEXION POSITIONNE -->
+    <div class="logout-container">
+      <form method="post" action="../php/authentification/logout.php">
+        <button type="submit" class="btn-deconnexion">Déconnexion</button>
+      </form>
+    </div>
+
+    <!-- LIENS DÉROULÉS -->
+    <div class="parcourir-dropdown" id="parcourirLinks" style="display: none;">
+      <a href="../php/tout parcourir/activites_sportives.php">Activités sportives</a><br>
+      <a href="../php/tout parcourir/sports_competition.php">Les Sports de compétition</a><br>
+      <a href="salle_de_sport.html">Salle de sport Omnes</a>
+    </div>
+
+     <!-- FORMULAIRE DE RECHERCHE -->
+<div id="rechercheContainer" class="recherche-form">
+  <form method="get" action="../php/recherche/barre_recherche.php">
+    <input type="text" name="q" placeholder="Rechercher..." />
+    <button type="submit">Rechercher</button>
+  </form>
+</div>
+
+    <!-- MAIN SECTION COACH -->
+    <section class="main-section">
+      <div class="card">
+        <h2>Votre espace Coach</h2>
+        <p>Bienvenue dans votre espace dédié. Ici, vous pouvez gérer vos séances, suivre les clients et consulter vos plannings.</p>
+        <button onclick="window.location.href='authentification/EditerUser.html'">Éditer mon profil</button>
+      <button onclick="window.location.href='authentification/EditerPassword.html'">Éditer mon mot de passe</button>
+      <hr>
+      <button onclick="window.location.href='../php/chat/chat_select.php'">Chatbox</button>
+      <button onclick="window.location.href='../php/chat/mail.php'">Envoyer un mail</button>
+      <button onclick="window.location.href='../php/chat/teams.php'">Appeler en visioconférence</button>
+      </div>
+
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <h3>Contactez-nous</h3>
+      <p>Email : <a href="mailto:contact@sportify.fr">contact@sportify.fr</a></p>
+      <p>Téléphone : +33 1 23 45 67 89</p>
+      <p>Adresse : 10 Rue Sextius Michel, 75015 Paris, France</p>
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.3724386130675!2d2.2859626761368914!3d48.851108001219515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b486bb253%3A0x61e9cc6979f93fae!2s10%20Rue%20Sextius%20Michel%2C%2075015%20Paris!5e0!3m2!1sfr!2sfr!4v1748272681968!5m2!1sfr!2sfr" 
+          width="100%" 
+          height="250" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="../js/bases.js"></script>
+</body>
+</html>

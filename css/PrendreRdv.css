@@ -1,0 +1,97 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7fafd;
+  color: #333;
+  margin: 0;
+  padding: 2em;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #2c3e50;
+}
+
+#coachInfo {
+  margin-top: 1em;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Tableau RDV */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.free {
+  background: #fff;
+}
+
+.booked {
+  background-color: #4aa;
+  color: #fff;
+}
+
+.unavailable {
+  background-color: #eee;
+}
+
+td:hover.free {
+  background: #eef;
+  cursor: pointer;
+}
+
+/* Bouton Retour */
+.retour-button {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.retour-button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.retour-button button:hover {
+  background-color: #0066cc;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1em;
+}
+th, td {
+  border: 1px solid #999;
+  text-align: center;
+  padding: 6px;
+}
+
+#coachInfo { margin-top: 1em; font-weight: bold; }

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coach>
+    <id>46</id>
+    <nom>Manaudou</nom>
+    <prenom>Michou</prenom>
+    <email>michou.manaudou@sportify.omnes</email>
+    <specialites>
+        <specialite>Natation</specialite>
+        <specialite>Plongeon</specialite>
+    </specialites>
+    <video>https://www.youtube.com/embed/anffHYiUyqg</video>
+    <photo>../../uploads/photos/michou_manaudou.png</photo>
+    <cv_pdf>../../uploads/cvs/michou_manaudou.pdf</cv_pdf>
+    <formations>
+        <formation>
+            <titre>Licence Sciences et Techniques du Sport</titre>
+            <ecole>Université Aix-Marseille</ecole>
+            <annee>2015</annee>
+        </formation>
+        <formation>
+            <titre>Diplôme Entraîneur FFN</titre>
+            <ecole>Fédération Française de Natation</ecole>
+            <annee>2018</annee>
+        </formation>
+    </formations>
+    <experiences>
+        <experience>
+            <poste>Coach natation synchronisée</poste>
+            <lieu>Pôle France INSEP</lieu>
+            <duree>2016-2019</duree>
+        </experience>
+        <experience>
+            <poste>Coach natation/plongeon</poste>
+            <lieu>Omnes Gym</lieu>
+            <duree>2020-Présent</duree>
+        </experience>
+    </experiences>
+    <certifications>
+        <certification>BNSSA</certification>
+        <certification>Entraîneur fédéral natation</certification>
+    </certifications>
+    <disponibilite>
+        <jour nom="Lundi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mardi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mercredi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Jeudi">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Vendredi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Samedi">
+            <matin>true</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Dimanche">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+    </disponibilite>
+</coach>

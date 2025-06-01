@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coach>
+    <id>43</id>
+    <nom>Ocho</nom>
+    <prenom>Kabé</prenom>
+    <email>kabe.ocho@sportify.omnes</email>
+    <specialites>
+        <specialite>Football</specialite>
+    </specialites>
+    <video>https://www.youtube.com/embed/yJdQXen824k</video>
+    <photo>../../uploads/photos/kabe_ocho.png</photo>
+    <cv_pdf>../../uploads/cvs/kabe_ocho.pdf</cv_pdf>
+    <formations>
+        <formation>
+            <titre>Licence Sciences du Sport</titre>
+            <ecole>Université de Lille</ecole>
+            <annee>2016</annee>
+        </formation>
+        <formation>
+            <titre>Certificat UEFA B</titre>
+            <ecole>FFF</ecole>
+            <annee>2019</annee>
+        </formation>
+    </formations>
+    <experiences>
+        <experience>
+            <poste>Entraîneur jeunes</poste>
+            <lieu>Club AS Nancy</lieu>
+            <duree>2017-2020</duree>
+        </experience>
+        <experience>
+            <poste>Coach football senior</poste>
+            <lieu>Omnes Gym</lieu>
+            <duree>2021-Présent</duree>
+        </experience>
+    </experiences>
+    <certifications>
+        <certification>UEFA Coaching Licence B</certification>
+        <certification>Secourisme PSC1</certification>
+    </certifications>
+    <disponibilite>
+        <jour nom="Lundi">
+            <matin>true</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Mardi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mercredi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Jeudi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Vendredi">
+            <matin>true</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Samedi">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Dimanche">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+    </disponibilite>
+</coach>

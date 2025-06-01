@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coach>
+    <id>45</id>
+    <nom>Marchand</nom>
+    <prenom>Leon</prenom>
+    <email>leon.marchand@sportify.omnes</email>
+    <specialites>
+        <specialite>Natation</specialite>
+        <specialite>Plongeon</specialite>
+    </specialites>
+    <video>https://www.youtube.com/embed/E0JsuT0NTmE</video>
+    <photo>../../uploads/photos/leon_marchand.png</photo>
+    <cv_pdf>../../uploads/cvs/leon_marchand.pdf</cv_pdf>
+    <formations>
+        <formation>
+            <titre>Licence STAPS</titre>
+            <ecole>Université Toulouse III</ecole>
+            <annee>2018</annee>
+        </formation>
+        <formation>
+            <titre>Diplôme d’État Entraîneur Natation</titre>
+            <ecole>FFN Paris</ecole>
+            <annee>2020</annee>
+        </formation>
+    </formations>
+    <experiences>
+        <experience>
+            <poste>Coach natation et plongeon</poste>
+            <lieu>Cercle des nageurs de Marseille</lieu>
+            <duree>2020-2022</duree>
+        </experience>
+        <experience>
+            <poste>Responsable aquatique</poste>
+            <lieu>Omnes Gym</lieu>
+            <duree>2023-Présent</duree>
+        </experience>
+    </experiences>
+    <certifications>
+        <certification>BNSSA</certification>
+        <certification>Entraîneur FFN Niveau 2</certification>
+    </certifications>
+    <disponibilite>
+        <jour nom="Lundi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mardi">
+            <matin>false</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Mercredi">
+            <matin>true</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Jeudi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Vendredi">
+            <matin>true</matin>
+            <apresmidi>true</apresmidi>
+        </jour>
+        <jour nom="Samedi">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+        <jour nom="Dimanche">
+            <matin>false</matin>
+            <apresmidi>false</apresmidi>
+        </jour>
+    </disponibilite>
+</coach>

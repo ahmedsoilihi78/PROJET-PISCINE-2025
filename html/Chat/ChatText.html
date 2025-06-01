@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Espace de chat texte</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding:20px; }
+    #chatBox {
+      border:1px solid #ccc; padding:10px;
+      height:300px; overflow-y:scroll;
+      background:#f9f9f9; margin-bottom:10px;
+    }
+    .msg { margin:5px 0; }
+    .msg.sent { text-align:right; }
+    .msg .time { font-size:0.8em; color:#666; margin:0 5px; }
+    #chatForm { display:flex; }
+    #chatForm input[type="text"] {
+      flex:1; padding:8px; border:1px solid #ccc; border-radius:4px;
+    }
+    #chatForm button {
+      margin-left:8px; padding:8px 16px; border:none;
+      background:#28a745; color:#fff; border-radius:4px; cursor:pointer;
+    }
+    #chatForm button:hover { background:#218838; }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1>Chat texte</h1>
+
+<div>
+  <label for="userSelect">Interlocuteur :</label>
+  <select id="userSelect">
+    <option value="">-- Choisir --</option>
+  </select>
+</div>
+
+<div id="chatBox">Sélectionnez un interlocuteur pour démarrer.</div>
+
+<form id="chatForm" style="display:none;">
+  <input type="text" id="messageInput" placeholder="Votre message…" autocomplete="off" required>
+  <button type="submit">Envoyer</button>
+</form>
+
+<script>
+  $(function(){
+    const API = '../../php/chat/chat_select.php';
+    let me = {}, receiverId = null;
+
+    // 1) Récupérer mes infos et la liste des users
+    $.getJSON(API, {action:'getUser'}).done(res => {
+      if (!res.success) return alert('Erreur auth');
+      me = res.user;
+      // charger la liste des interlocuteurs
+      $.getJSON(API, {action:'getUsers'}).done(res2 => {
+        if (!res2.success) return;
+        res2.users.forEach(u => {
+          $('#userSelect').append(
+                  $('<option>').val(u.id).text(u.nom+' '+u.prenom)
+          );
+        });
+      });
+    });
+
+    // 2) Changement d'interlocuteur
+    $('#userSelect').on('change', function(){
+      receiverId = $(this).val();
+      $('#chatBox').empty();
+      clearInterval(window.chatInterval);
+      if (receiverId) {
+        $('#chatForm').show();
+        loadMessages();
+        window.chatInterval = setInterval(loadMessages, 2000);
+      } else {
+        $('#chatForm').hide();
+        $('#chatBox').text('Sélectionnez un interlocuteur pour démarrer.');
+      }
+    });
+
+    // 3) Charger les messages
+    function loadMessages(){
+      $.getJSON(API, {action:'getMessages', receiver_id: receiverId})
+              .done(res => {
+                if (!res.success) return;
+                $('#chatBox').html(res.messages.map(m => {
+                  const cls = (m.sender_id == me.id) ? 'msg sent' : 'msg';
+                  const time = new Date(m.date_envoi).toLocaleTimeString();
+                  return `<div class="${cls}">
+                     <span class="time">[${time}]</span>
+                     ${$('<div>').text(m.contenu).html()}
+                   </div>`;
+                }).join(''));
+                $('#chatBox').scrollTop($('#chatBox')[0].scrollHeight);
+              });
+    }
+
+    // 4) Envoi de message
+    $('#chatForm').on('submit', function(e){
+      e.preventDefault();
+      const txt = $('#messageInput').val().trim();
+      if (!txt) return;
+      $.post(API, {
+        action: 'sendMessage',
+        receiver_id: receiverId,
+        message: txt
+      }).done(res => {
+        if (res.success) {
+          $('#messageInput').val('');
+          loadMessages();
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
